@@ -1,0 +1,7 @@
+.word {
+    display: inline-block;
+    cursor: pointer;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 247, 0, 0.8);
+    transition: color 0.3s ease;
+}
