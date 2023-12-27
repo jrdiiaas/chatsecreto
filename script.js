@@ -29,6 +29,11 @@ function enviarTexto() {
     inputText.value = '';
 }
 
+function limparTexto() {
+    // Limpa o elemento de saída
+    document.getElementById('outputText').innerText = '';
+}
+
 // Envolve o código em um evento de carregamento da página
 document.addEventListener('DOMContentLoaded', function () {
     const outputText = document.getElementById('outputText');
