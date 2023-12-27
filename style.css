@@ -1,7 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .word {
     display: inline-block;
     cursor: pointer;
     color: transparent;
-    text-shadow: 0 0 10px rgba(0, 247, 0, 0.8);
+    text-shadow: 0 0 10px #000000;
     transition: color 0.3s ease;
+    font-size: 20pt;
+    text-align: center;
+}
+
+header {
+    background-color: #19882c;
+    height: 100px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+header>h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+main {
+    background-color: #98b39c;
+    padding: 28pt;
+}
+
+main>div {
+    border: 1px ridge #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+div>p,
+section>p {
+    font-size: 20pt;
+    padding: 20px;
+    text-align: center;
+}
+
+.inputText {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#inputText {
+    width: 98%;
+    min-height: 300px;
+    font-size: 16pt;
+    text-align: center;
+    border-radius: 10px;
+}
+
+button {
+    padding: 20px;
+    width: 48%;
+    font-size: 16pt;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#outputText {
+    text-align: center;
+    font-size: 20pt;
+}
+
+footer {
+    background-color: #555555;
+    color: #ffffff;
+    height: 100px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+footer>p {
+    font-size: 16pt;
 }
