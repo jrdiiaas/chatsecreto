@@ -1,3 +1,5 @@
+// @author ALEXANDRE_SOUSA_DIAS_JUNIOR <jrdiiaas@icloud.com>
+
 // Cria uma função para adicionar ações ao input
 function enviarTexto() {
     // Transforma o elemento inputText ID em uma variável
@@ -26,7 +28,7 @@ function enviarTexto() {
             //  Define o texto do elemento < span > criado para ser igual à palavra atual no loop. Cada < span > representa uma palavra do texto original.
             span.textContent = palavra;
             // Adiciona a class word em cada span. Isso garante que cada palavra tenha a classe 'word'.
-            span.classList.add('word');
+            // span.classList.add('word');
             // Faz com que cada elemento que seja <span> que contém a palavra como filho do elemento <p> fique agrupado dentro do <p>.
             paragrafo.appendChild(span);
             // Adicionar um espaço entre as palavras
@@ -46,30 +48,31 @@ function limparTexto() {
     document.getElementById('outputText').innerText = '';
 }
 
-// Envolve o código em um evento de carregamento da página
-document.addEventListener('DOMContentLoaded', function () {
+function main() {
+    console.log('main rodando');
+    // Envolve o código em um evento de carregamento da página
     const outputText = document.getElementById('outputText');
-
+    console.log(outputText);
     // Verifica se o elemento 'outputText' existe antes de adicionar os event listeners
     if (outputText) {
         outputText.addEventListener('mouseover', function (event) {
+            console.log("mouseover evento detectado");
             const target = event.target;
 
-            // Verifica se o elemento sobre o qual o mouse passou é uma palavra com a classe 'word'
-            if (target.classList.contains('word')) {
-                // Remove a classe 'word' quando o mouse passa sobre a palavra
-                target.classList.remove('word');
-            }
+            outputText.classList.remove('word');
+            // // Verifica se o elemento sobre o qual o mouse passou é uma palavra com a classe 'word'
+            // if (target.classList.contains('word')) {
+            //     // Remove a classe 'word' quando o mouse passa sobre a palavra
+
+            // }
+            // // outputText.style.color = "red";
         });
 
         outputText.addEventListener('mouseout', function (event) {
-            const target = event.target;
-
-            // Verifica se o mouse saiu do elemento que era uma palavra
-            if (target.classList.contains('word')) {
-                // Adiciona a classe 'word' de volta quando o mouse sai da palavra
-                target.classList.add('word');
-            }
+            // console.log("mouseout evento detectado");
+            // const target = event.target;
+            outputText.classList.add('word');
+            // outputText.style.color = "lightblue";
         });
     }
-});
+}
